@@ -2,6 +2,8 @@
 `> Enhance your discord experience with Euphoria V`
 
 # Features:
-`> Broadcast
+```
+> Broadcast
 > Auto-Updater
-> More stuff comming soon (we are still working on it)`
+> More stuff comming soon (we are still working on it)
+```
