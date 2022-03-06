@@ -97,10 +97,11 @@ if __name__ == '__main__':
             outfile.write(json_object)
         print("created current.json")
         config = {
-            "token": ""
+            "token": "",
+            "prefix": "!"
         }
         json_object = json.dumps(config, indent = 3)
-        with open("config/current.json", "w") as outfile:
+        with open("config/config.json", "w") as outfile:
             outfile.write(json_object)
         print("created config.json")
         download = requests.get(f"{database}/release/main.py")
@@ -114,4 +115,5 @@ if __name__ == '__main__':
     time.sleep(4.5)
     os.system("cls")
     time.sleep(0.5)
+    os.system("start main.py")
     exit(0)
