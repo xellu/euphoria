@@ -1,5 +1,5 @@
-# Euphoria
-```> The better way to use discord```
+# Euphoria ``` The better way to use discord```
+
 
 # ~Commands:
 ```
