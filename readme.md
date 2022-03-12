@@ -1,6 +1,7 @@
 # Euphoria
 `> The better way to use discord`
    `~Commands:`
+```
 [Abuse]
 spam > spams a message for a set amount of times
 ttsspam > message spammer with /tts
@@ -59,3 +60,4 @@ encode > encodes a message with base64, sha256 or sha512
 decode > decodes a string with base64
 avatar > sends url of your pfp
 nitro > generates random nitro code (max 10/msg)
+```
