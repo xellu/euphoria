@@ -1,6 +1,7 @@
 # Euphoria
 ```> The better way to use discord```
-   ```~Commands:```
+
+# ~Commands:
 ```
 [Abuse]
 spam > spams a message for a set amount of times
