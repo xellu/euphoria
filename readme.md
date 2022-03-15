@@ -1,5 +1,5 @@
 # Euphoria ``` The better way to use discord```
-> Latest: 1.0.3 (2/12/22)
+> Latest: 1.0.4 (2/13/22)
 
 # ~Commands:
 ```
