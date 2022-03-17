@@ -45,7 +45,7 @@ autoupdate ─ toggles autoupdating
 join ─ join official euphoria discord
 repo ─ opens github repository
 cls ─ clears the console
-prefix ─ change the prefix
+setprefix ─ change the prefix
 broadcast ─ sends the current broadcast message
 
 
