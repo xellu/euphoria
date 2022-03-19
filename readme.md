@@ -1,6 +1,5 @@
 # Euphoria ``` The better way to use discord```
-> Latest: 1.1. (3/17/22) 
-~Discord Server: https://discord.gg/kjh9bEytUH
+> Latest: 1.1. (3/17/22) ― Discord: https://discord.gg/kjh9bEytUH
 
 # ~Commands:
 ```
