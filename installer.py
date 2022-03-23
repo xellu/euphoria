@@ -72,9 +72,11 @@ def run():
     print(".", end="")
     latest = json.loads(urlopen(f"{database}/latest.json").read())
     version = latest["version"]
+    build = latest["build"]
     release = latest["release"]
     current_content = {
         "version": version,
+        "build": build,
         "release": release
     }
     current_object = json.dumps(current_content, indent = 2)
