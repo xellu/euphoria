@@ -98,12 +98,20 @@ def run():
     if prefix == "":
         prefix = "e."
         print(">    [ERROR] Invalid prefix, setting to 'e.'")
+    beta_updating = input(">    Do you want autoupdating to beta versions? (y/n): ")
+    if beta_updating == "y":
+        beta_updating = "true"
+        print(">    Beta enabled")
+    else:
+        beta_updating = "false"
+        print(">    Beta disabled")
 
     config_content = {
         "token": f"{token}",
         "prefix": f"{prefix}",
         "autoupdate": "true",
         "notifications": "true",
+        "beta": beta_updating,
         "consolemode": "false"
     }
     config_object = json.dumps(config_content, indent = 5)
