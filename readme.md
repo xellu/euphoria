@@ -1,5 +1,5 @@
 # Euphoria ``` The better way to use discord```
-> Latest: 1.1.2 (3/232) ― Discord: https://discord.gg/kjh9bEytUH
+> Latest: 1.1.2 (3/23/2) ― Discord: https://discord.gg/kjh9bEytUH
 
 # ~Commands:
 ```
