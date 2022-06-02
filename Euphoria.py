@@ -1120,7 +1120,6 @@ else:
 @Euphoria.event
 async def on_ready(): #ON READY
     try:
-        #PRE-AUTH
         log(f"INFO: Logged into {Euphoria.user}")
         cursor.hide()
         os.system("cls")
@@ -1152,22 +1151,6 @@ async def on_ready(): #ON READY
                             pass
         except Exception as error:
             log(f"CRITICAL ERROR: Can't load scripts ({error})")
-
-        #NEW USER WELCOMER
-        try:
-            open("settings/.welcomer")
-        except:
-            pass
-        else:
-            os.remove("settings/.welcomer")
-            successsay(Fore.LIGHTGREEN_EX+"Welcome to Euphoria Selfbot!")
-            successsay(Fore.LIGHTGREEN_EX+f"You can see all commands by using '{prefix}help' in discord chat")
-            successsay(Fore.LIGHTGREEN_EX+"You can tell the what console messages mean just by the color!")
-            errorsay("[ - ] Error/Important messages")
-            warnsay("[ ! ] Warnings")
-            infosay("[ @ ] Informations")
-            consolesay("[ / ] Commmands")
-            successsay("[ + ] Success messages")
 
         #__PYCACHE__ REMOVER
         try:
