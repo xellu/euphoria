@@ -202,9 +202,9 @@ def startup():
         else:
             os.remove(f"settings/assets/{file}")
     title()
-    autoupdater()
     if theme.lower() != "moon":
         separator()
+    autoupdater()
 
 class DevNull: 
         def write(self, msg): 
