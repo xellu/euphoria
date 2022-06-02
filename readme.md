@@ -2,7 +2,7 @@
 ``` The way discord should be used```
 > Latest: 2.0.0-pre4 (6/1/2022) ― Discord: https://discord.gg/kjh9bEytUH
 
-~ Features:
+# ~ Features:
 ```
 [ Categories ]
 fun
@@ -157,3 +157,5 @@ raidlog ─ toggles raid detections
 logout ─ disables the selfbot for your current discord account
 uptime ─ shows how long you've been using the selfbot
 ```
+
+> `Xellu 2022` 
