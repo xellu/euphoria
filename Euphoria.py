@@ -201,8 +201,8 @@ def startup():
             pass
         else:
             os.remove(f"settings/assets/{file}")
-    autoupdater()
     title()
+    autoupdater()
     if theme.lower() != "moon":
         separator()
 
@@ -1122,10 +1122,6 @@ async def on_ready(): #ON READY
     try:
         log(f"INFO: Logged into {Euphoria.user}")
         cursor.hide()
-        os.system("cls")
-        title()
-        settings_regenerate()
-    
         startup()
         toast("Logged in", "fix")
         if "linux" in str(platform.system()).lower():
