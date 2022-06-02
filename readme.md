@@ -1,8 +1,9 @@
 # Euphoria
 ```
 The way discord should be used
+
+Latest: 2.0.0-pre4 (6/1/2022) ― Discord: https://discord.gg/kjh9bEytUH
 ```
-> Latest: 2.0.0-pre4 (6/1/2022) ― Discord: https://discord.gg/kjh9bEytUH
 
 # ~ Features:
 ```
