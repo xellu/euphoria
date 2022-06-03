@@ -2,7 +2,7 @@
 ```
 The way discord should be used
 
-Latest: 2.0.0-Stable (6/1/2022) ― Discord: https://discord.gg/kjh9bEytUH
+Latest: 2.0.0-Stable~2 (7/1/2022) ― Discord: https://discord.gg/kjh9bEytUH
 ```
 
 # ~ Downloading:
