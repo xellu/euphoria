@@ -7,7 +7,6 @@ Latest: 2.0.0-Stable (6/1/2022) ― Discord: https://discord.gg/kjh9bEytUH
 
 # ~ Features:
 ```
-[ Categories ]
 fun
 text
 misc
@@ -17,8 +16,6 @@ scripts
 raiding
 account
 selfbot
-
-[ Fun ]
 gay [@user] ─ gay meter, very advanced
 penis [@user] ─ insane penis measuring system (doesn't lie)
 iqtest [@user] ─ iq testing service 
@@ -38,8 +35,6 @@ rainbow <@role> ─ makes the role
 stoprainbow ─ stops the role from gay
 minesweeper ─ play the minesweeper game
 bao ─ watch the dumpling movie
-
-[ Text ]
 ascii <text> ─ generates ascii text
 spoil <text> ─ marks every character of the 
 encode <encoding> <text> ─ encodes the text
@@ -68,8 +63,6 @@ codeblock [type] <text> ─ puts the text into the codeblock
 cowsay <text> ─ cowsay command from linux
 caption <text> ─ captions the latest image in the channel
 edit <new message> ─ edits your latest message
-
-[ Misc ]
 credits ─ credit page
 image ─ sends random image
 servericon ─ gets server icon
@@ -87,9 +80,6 @@ timer [time(s)] ─ sets a timer in the channel
 date ─ gets current date
 serversave ─ saves the server you're in
 serverload <list/save id> ─ loads the saved server
-"
-
-[ Abuse ]
 nuke [message] ─ destroy someones server*
 massreact [channel id] ─ reacts to every message sent with copious amounts of emojis
 massban ─ bans everyone from the server*
@@ -109,8 +99,6 @@ cchat ─ clears the chat even if you dont have permissions to do so
 spoof ─ makes you go inviss
 vcspam <amount> ─ spams the vc with join sounds
 vcddos <duration(s)> ─ makes the makes the vc you're in quiet (only on servers, max 300s)*
-
-[ Admin ]
 ban <@user> [reason] ─ bans the user from the server
 kick <@user> [reason ]─ kicks the user from the server
 slowmode [delay] ─ sets the slowmode for the channel 
@@ -121,8 +109,6 @@ unlock ─ unlocks the channel
 purge <amount> [@user] ─ deletes a set amount of messages
 channelspace <name> ─ allows you to create text channel with spaces in the name
 addemoji <:custom emoji:> [name] ─ adds a emoji from another server (nitro required)
-
-[ Raiding ]
 joinserver <invite> ─ joins the selected server
 spamserver <amount> <channel id> <text> ─ starts spamming in the channel
 massspamserver <amount> <server id> <text> ─ starts spamming in the whole server
@@ -130,16 +116,12 @@ leaveserver <server id> ─ leaves the server
 singraid "<author_name>" "<song_name>" ─ sings the song with the tokens (accs must be in the server you're using it in)
 checktokens ─ checks if you have valid tokens
 tokens ─ see how many tokens do you have
-
-[ Account ]
 purgeself <amount> ─ deletes messages sent by you
 whois [@user] ─ displays info about mentioned user/you
 status [text] ─ changes your status 
 aboutme [text] ─ changes your aboutme
 avatar [@user] ─ sends users/your avatar
 stealavatar <@user> ─ saves @users avatar
-
-[ Selfbot ]
 reboot/r/restart ─ restarts the console
 dr/disrestart [canary (true/false)] ─ restarts the discord
 clear/cls ─ clears the console
