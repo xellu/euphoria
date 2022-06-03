@@ -5,7 +5,15 @@ The way discord should be used
 Latest: 2.0.0-Stable (6/1/2022) ― Discord: https://discord.gg/kjh9bEytUH
 ```
 
-# ~ Features:
+# ~ Downloading:
+```
+1) Go to https://github.com/xellu/euphoria/releases and download the latest release
+2) Run installer.py and wait for it to finish
+3) Launch Euphoria.py and fill out needed information
+4) You're good to go!
+```
+
+# ~ Features: 147
 ```
 fun
 text
@@ -24,6 +32,9 @@ dox [@user] ─ dox someone!
 ddos <@user> ─ boot someone off the internet 
 readrules <@user> ─ read the f-ing rules
 empty ─ nothing, just nothing 
+gif ─ random gif
+dice ─ rolls a dice
+8ball [question] ─ gives you a random answer
 alphabet ─ just read the name idk
 roast <@user> ─ roast the f- outta @target 
 rarefish [@user] ─ see how many rare fish user has
@@ -78,8 +89,11 @@ share <@user> ─ adds/removes user from command sharing list
 sharelist ─ sends a list of users you're sharing your commands with
 timer [time(s)] ─ sets a timer in the channel
 date ─ gets current date
+queue ─ shows current 2b2 queue length
 serversave ─ saves the server you're in
 serverload <list/save id> ─ loads the saved server
+statuscycle <stop/text> ─ cycles your status message
+activitycycle ─ cycles your activity status
 nuke [message] ─ destroy someones server*
 massreact [channel id] ─ reacts to every message sent with copious amounts of emojis
 massban ─ bans everyone from the server*
