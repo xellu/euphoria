@@ -244,15 +244,30 @@ def get_random_user_agent():
         userAgents = ["Mozilla/5.0 (Windows NT 6.2;en-US) AppleWebKit/537.32.36 (KHTML, live Gecko) Chrome/56.0.3075.83 Safari/537.32", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/38.0.2125.101 Safari/537.1", "Mozilla/5.0 (Windows NT 8.0; WOW64) AppleWebKit/536.24 (KHTML, like Gecko) Chrome/32.0.2019.89 Safari/536.24", "Mozilla/5.0 (Windows NT 5.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.41 Safari/537.36", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3058.0 Safari/537.36", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3258.0 Safari/537.36", "Mozilla/5.0 (Windows NT 5.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36", "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2599.0 Safari/537.36", "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.35 (KHTML, like Gecko) Chrome/27.0.1453.0 Safari/537.35", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.139 Safari/537.36", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/6.0 Safari/537.36", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.0.9757 Safari/537.36", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/38.0.2125.101 Safari/537.1", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3258.0 Safari/537.36", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/6.0 Safari/537.36", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/38.0.2125.101 Safari/537.1", "Mozilla/5.0 (Windows NT 5.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2151.2 Safari/537.36", "Mozilla/5.0 (Windows NT 5.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36", "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1204.0 Safari/537.1", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/67.0.3387.0 Safari/537.36", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.0.9757 Safari/537.36", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3359.181 Safari/537.36", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Safari/537.36", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3251.0 Safari/537.36", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538 (KHTML, like Gecko) Chrome/36 Safari/538", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.18 Safari/535.1", "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.3 (KHTML, like Gecko) Chrome/5.0.355.0 Safari/533.3", "Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/532.0 (KHTML, like Gecko) Chrome/3.0.195.4 Safari/532.0", "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.35 (KHTML, like Gecko) Chrome/27.0.1453.0 Safari/537.35", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3359.181 Safari/537.36", "Mozilla/5.0 (Windows NT 10.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36", "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3057.0 Safari/537.36", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.14 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.14", "Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36 TC2", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3058.0 Safari/537.36", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3258.0 Safari/537.36", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2531.0 Safari/537.36", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Safari/537.36", "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36,gzip(gfe)", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2264.0 Safari/537.36", "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.29 Safari/537.36", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.150 Safari/537.36", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.45 Safari/537.36", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.14 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.14", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2714.0 Safari/537.36", "24.0.1284.0.0 (Windows NT 5.1) AppleWebKit/534.0 (KHTML, like Gecko) Chrome/24.0.1284.0.3.742.3 Safari/534.3", "Mozilla/5.0 (X11; Ubuntu; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1864.6 Safari/537.36", "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Chrome/36.0.1985.125 CrossBrowser/36.0.1985.138 Safari/537.36", "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Avast/70.0.917.102", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1615.0 Safari/537.36", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.14 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.14", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/6.0 Safari/537.36", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3608.0 Safari/537.36", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Safari/537.36", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3251.0 Safari/537.36", "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/54.2.133 Chrome/48.2.2564.133 Safari/537.36", "24.0.1284.0.0 (Windows NT 5.1) AppleWebKit/534.0 (KHTML, like Gecko) Chrome/24.0.1284.0.3.742.3 Safari/534.3", "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/54.2.133 Chrome/48.2.2564.133 Safari/537.36", "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/54.2.133 Chrome/48.2.2564.133 Safari/537.36", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.18 Safari/535.1", "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2427.7 Safari/537.36", "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.61 Safari/537.36", "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Chrome/36.0.1985.125 CrossBrowser/36.0.1985.138 Safari/537.36", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.45 Safari/537.36", "Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/530.6 (KHTML, like Gecko) Chrome/2.0.174.0 Safari/530.6", "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.29 Safari/537.36", "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.104 Safari/537.36", "24.0.1284.0.0 (Windows NT 5.1) AppleWebKit/534.0 (KHTML, like Gecko) Chrome/24.0.1284.0.3.742.3 Safari/534.3", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Web Preview) Chrome/27.0.1453 Safari/537.36,gzip(gfe)", "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.29 Safari/537.36", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.45 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.45", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.150 Safari/537.36", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.102 Safari/537.36", "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2419.0 Safari/537.36", "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Chrome/36.0.1985.125 CrossBrowser/36.0.1985.138 Safari/537.36", "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1204.0 Safari/537.1", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2700.0 Safari/537.36#", "Mozilla/5.0 (Windows NT 10.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36", "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.16 (KHTML, like Gecko) Chrome/5.0.335.0 Safari/533.16", "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.68 Safari/537.36", "Mozilla/5.0 (Windows; U; Windows 95) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.43 Safari/535.1", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2700.0 Safari/537.36#", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.114 Safari/537.36", "Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/530.6 (KHTML, like Gecko) Chrome/2.0.174.0 Safari/530.6", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538 (KHTML, like Gecko) Chrome/36 Safari/538", "Mozilla/5.0 (Windows; U; Windows 95) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.43 Safari/535.1", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.18 Safari/535.1", "Mozilla/5.0 (X11; Linux x86_64; 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/17.0.1410.63 Safari/537.31", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2583.0 Safari/537.36", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2151.2 Safari/537.36", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.18 Safari/535.1", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/536.36 (KHTML, like Gecko) Chrome/67.2.3.4 Safari/536.36", "Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/530.5 (KHTML, like Gecko) Chrome/2.0.172.0 Safari/530.5", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.69 Safari/537.36", "Mozilla/5.0 (Windows NT 10.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Safari/537.36", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Safari/537.36 EdgA/41.0.0.1662", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/38.0.2125.101 Safari/537.1"]
         userAgent = random.choice(userAgents)
         return userAgent
+
+def get_command(text):
+    c = 0
+    cmd = ""
+    for letter in text:
+        if letter == " ":
+            c =1
+        if c == 0:
+            cmd += letter
+    cmd = cmd.replace(prefix, "")
+    return cmd
+
 #Logging
 def log(text):
-    c_time = time.strftime("%H:%M:%S", time.localtime())
     try:
-        content = open(f"settings/logs/{logfile}", "r", encoding="utf-8").read()
+        c_time = time.strftime("%H:%M:%S", time.localtime())
+        try:
+            content = open(f"settings/logs/{logfile}", "r", encoding="utf-8").read()
+        except:
+            open(f"settings/logs/{logfile}", "w", encoding="utf-8").write(text)
+        else:
+            open(f"settings/logs/{logfile}", "w", encoding="utf-8").write(content+f"\n[{c_time}]     {text}")
     except:
-        open(f"settings/logs/{logfile}", "w", encoding="utf-8").write(text)
-    else:
-        open(f"settings/logs/{logfile}", "w", encoding="utf-8").write(content+f"\n[{c_time}]     {text}")
+        settings_regenerate()
 
 def logfile():
     datenow = time.strftime("%m_%d_20%y", time.localtime())
@@ -513,7 +528,7 @@ def leet_text(text):
 
 def embed_text(text):
     color = json.loads(open("settings/config.json","r").read())["embed_color"]
-    return f"https://euphoria.xellu1337.repl.co/e?text={text}&title=Euphoria&color={color}"
+    return f"https://euphoria.xellu1337.repl.co/e?text={text}&title=&color={color}"
 
 def modbypass_text(text):
     output = ""
@@ -570,24 +585,34 @@ def unchina_text(text):
     return output
 
 def settings_regenerate():
-    try:
-        open("settings/tokens.txt")
-    except:
-        open("settings/tokens.txt", "x")
-    try:
-        open("settings/current.json")
-    except:
-        r = json.loads(requests.get("https://euphoria.xellu1337.repl.co/latest"))
-        open("settings/current.json", "w").write(json.dumps(r))
-    try:
-        open("settings/misc/sharelist.txt")
-    except:
-       open("settings/misc/sharelist.txt", "x")
-    if experiments_allow():
+    reinstall_needed = 0
+    dirs = ["scripts", "settings"]
+    for x in os.listdir():  
+        if x in dirs:
+            reinstall_needed += 1
+    if reinstall_needed == 0:
+        open("Installer.py", "wb").write(requests.get("https://raw.githubusercontent.com/xellu/euphoria/main/Installer.py").content)
+    files = ["settings/misc/sharelist.txt", "settings/accounts.txt", "settings/current.json", "settings/misc/personalpins.ep"]
+    # open("settings/assets/e.png", "wb").write(requests.get("https://raw.githubusercontent.com/xellu/euphoria/main/assets/e.png").content)
+    # open("settings/assets/success.ico", "wb").write(requests.get("https://raw.githubusercontent.com/xellu/euphoria/main/assets/success.ico").content)
+    # open("settings/assets/icon.ico", "wb").write(requests.get("https://raw.githubusercontent.com/xellu/euphoria/main/assets/icon.ico").content)
+    for file in files:
         try:
-            open("settings/experiments.json")
+            open(file)
         except:
-            open("settings/experiments.json", "w").write(json.dumps({"NullDev": "true","25-4-2022EmbedMode": "false","27-4-2022Blatant": "false"}, indent=1))
+            open(file, "w")
+    try:
+        open("settings/assets/e.png")
+    except:
+        open("settings/assets/e.png", "wb").write(requests.get("https://raw.githubusercontent.com/xellu/euphoria/main/assets/e.png").content)
+    try:
+        open("settings/assets/success.ico")
+    except:
+        open("settings/assets/success.ico", "wb").write(requests.get("https://raw.githubusercontent.com/xellu/euphoria/main/assets/success.ico").content)
+    try:
+        open("settings/assets/icon.ico")
+    except:
+        open("settings/assets/icon.ico", "wb").write(requests.get("https://raw.githubusercontent.com/xellu/euphoria/main/assets/icon.ico").content)
     
 async def get_message(ctx, id):
         channelMsgHistory = await ctx.channel.history(limit=10000).flatten()
@@ -822,7 +847,7 @@ try: # CONFIG
     nitro_sniper = config["nitro_sniper"]
     
 except:
-    prefix = "32e1f9c46df155265874f8e04dd03edec3336bdda9b77e68d7c7470550767c2e!"
+    prefix = "no-work!"
     load_error = 2
 
 # try: # USERDATA
@@ -877,6 +902,8 @@ afk_blacklist = []
 vc_regions = ["brazil", "hongkong", "india", 'japan', 'russia', 'singapore', 'sydney']
 rainbow_role = False
 bootup_time = int(time.time())
+cycle_activity = False
+cycle_status = False
 
 #Utils
 command_spoof = 0
@@ -893,8 +920,7 @@ c_help = f"""[ Categories ]
 {prefix}scripts
 {prefix}raiding
 {prefix}account
-{prefix}selfbot
-"""
+{prefix}selfbot"""
 #{prefix}─
 c_fun = f"""[ Fun ]
 <> = required | [] = optional
@@ -907,6 +933,9 @@ c_fun = f"""[ Fun ]
 {prefix}ddos <@user> ─ boot someone off the internet 
 {prefix}readrules <@user> ─ read the f-ing rules
 {prefix}empty ─ nothing, just nothing 
+{prefix}gif ─ random gif
+{prefix}dice ─ rolls a dice
+{prefix}8ball [question] ─ gives you a random answer
 {prefix}alphabet ─ just read the name idk
 {prefix}roast <@user> ─ roast the f- outta @target 
 {prefix}rarefish [@user] ─ see how many rare fish user has
@@ -917,8 +946,7 @@ c_fun = f"""[ Fun ]
 {prefix}rainbow <@role> ─ makes the role 
 {prefix}stoprainbow ─ stops the role from gay
 {prefix}minesweeper ─ play the minesweeper game
-{prefix}bao ─ watch the dumpling movie
-"""
+{prefix}bao ─ watch the dumpling movie"""
 #{prefix}─
 c_text = f"""[ Text ]
 <> = required | [] = optional
@@ -950,8 +978,7 @@ c_text = f"""[ Text ]
 {prefix}codeblock [type] <text> ─ puts the text into the codeblock 
 {prefix}cowsay <text> ─ cowsay command from linux
 {prefix}caption <text> ─ captions the latest image in the channel
-{prefix}edit <new message> ─ edits your latest message
-"""
+{prefix}edit <new message> ─ edits your latest message"""
 #{prefix}─
 c_misc = f"""[ Misc ]
 <> = required | [] = optional
@@ -971,9 +998,11 @@ c_misc = f"""[ Misc ]
 {prefix}sharelist ─ sends a list of users you're sharing your commands with
 {prefix}timer [time(s)] ─ sets a timer in the channel
 {prefix}date ─ gets current date
+{prefix}queue ─ shows current 2b2 queue length
 {prefix}serversave ─ saves the server you're in
 {prefix}serverload <list/save id> ─ loads the saved server
-"""
+{prefix}statuscycle <stop/text> ─ cycles your status message
+{prefix}activitycycle ─ cycles your activity status"""
 #{prefix}─
 c_abuse = f"""[ Abuse ]
 <> = required | [] = optional | * = admin permissions required
@@ -996,8 +1025,7 @@ c_abuse = f"""[ Abuse ]
 {prefix}cchat ─ clears the chat even if you dont have permissions to do so
 {prefix}spoof ─ makes you go inviss
 {prefix}vcspam <amount> ─ spams the vc with join sounds
-{prefix}vcddos <duration(s)> ─ makes the makes the vc you're in quiet (only on servers, max 300s)*
-"""
+{prefix}vcddos <duration(s)> ─ makes the makes the vc you're in quiet (only on servers, max 300s)*"""
 #{prefix}─
 c_admin = f"""[ Admin ]
 <> = required | [] = optional
@@ -1012,8 +1040,7 @@ c_admin = f"""[ Admin ]
 {prefix}unlock ─ unlocks the channel
 {prefix}purge <amount> [@user] ─ deletes a set amount of messages
 {prefix}channelspace <name> ─ allows you to create text channel with spaces in the name
-{prefix}addemoji <:custom emoji:> [name] ─ adds a emoji from another server (nitro required)
-"""
+{prefix}addemoji <:custom emoji:> [name] ─ adds a emoji from another server (nitro required)"""
 #{prefix}─
 c_scripts = f"{prefix}scripts"
 #{prefix}─
@@ -1026,8 +1053,7 @@ c_raiding = f"""[ Raiding ]
 {prefix}leaveserver <server id> ─ leaves the server
 {prefix}singraid "<author_name>" "<song_name>" ─ sings the song with the tokens (accs must be in the server you're using it in)
 {prefix}checktokens ─ checks if you have valid tokens
-{prefix}tokens ─ see how many tokens do you have
-"""
+{prefix}tokens ─ see how many tokens do you have"""
 #{prefix}─
 c_account = f"""[ Account ]
 <> = required | [] = optional
@@ -1037,8 +1063,7 @@ c_account = f"""[ Account ]
 {prefix}status [text] ─ changes your status 
 {prefix}aboutme [text] ─ changes your aboutme
 {prefix}avatar [@user] ─ sends users/your avatar
-{prefix}stealavatar <@user> ─ saves @users avatar
-"""
+{prefix}stealavatar <@user> ─ saves @users avatar"""
 #{prefix}─
 c_selfbot = f"""[ Selfbot ]
 <> = required | [] = optional
@@ -1061,12 +1086,12 @@ c_selfbot = f"""[ Selfbot ]
 {prefix}remind <duration(min)> <message> ─ reminds you after (duration)min
 {prefix}raidlog ─ toggles raid detections
 {prefix}logout ─ disables the selfbot for your current discord account
-{prefix}uptime ─ shows how long you've been using the selfbot
-"""
+{prefix}uptime ─ shows how long you've been using the selfbot"""
 #{prefix}─
 c_credits = f"""[ Credits ]
-day#1337 - made {prefix}search, {prefix}discord and helped alot with the selfbot development
-"""
+day1337 - made {prefix}search, {prefix}discord and helped alot with the selfbot development
+popbobik - gave some ideas for commands etc.
+<3"""
 
 #───────────────────────────────────────────────────────────────#
 # SELFBOT                                                       #
@@ -1239,6 +1264,7 @@ async def on_message(message):
     #NITRO SNIPER-----------------
 
     if nitro_sniper == "true":
+        snipe_start = time.time()
         try:
             if message.author.id != Euphoria.user.id:
                 if codeRegex.search(message_content):
@@ -1249,15 +1275,17 @@ async def on_message(message):
                                 'https://discordapp.com/api/v6/entitlements/gift-codes/' + code + '/redeem',
                                 json={'channel_id': str(message.channel.id)},
                                 headers={'authorization': token, 'user-agent': 'Mozilla/5.0'})
+                            snipe_end = time.time()
+                            snipe_time = snipe_start-snipe_end
                             if 'This gift has been redeemed already' in str(result.content):
-                                errorsay(f"Nitro Sniper: gift-code has already been redeem by someone else")
-                                log(f"INFO: claimed nitro gift-code detected ({message.guild.name} | Send by: {message.author})")
+                                errorsay(f"Nitro Sniper: used nitro code detected ({snipe_time}s)")
+                                log(f"INFO: claimed nitro gift-code detected ({message.guild.name} | Sent by: {message.author} | Snipe Time: {snipe_time})")
                             elif 'nitro' in str(result.content):
-                                successsay(f"Nitro Sniper: successfully redeemed a gift-code ({message.guild.name} | #{message.channel.name} | {message.author})")
+                                successsay(f"Nitro Sniper: successfully redeemed a gift-code ({message.guild.name} | #{message.channel.name} | {message.author} | Snipe Time: {snipe_time})")
                                 toast("Nitro Sniper: Redeemed a Nitro Gift-code", "success")
-                                log(f"INFO: nitro gift-code redeemed ({message.guild.name} | Send by: {message.author})")
+                                log(f"INFO: nitro gift-code redeemed ({message.guild.name} | Sent by: {message.author} | Snipe Time: {snipe_time})")
                             elif 'Unknown Gift Code' in str(result.content):
-                                log(f"INFO: unkown nitro gift-code detected ({message.guild.name} | Send by: {message.author})")
+                                log(f"INFO: unknown nitro gift-code detected ({message.guild.name} | Sent by: {message.author} | Snipe Time: {snipe_time})")
                         except:
                             pass
         except:
@@ -1449,11 +1477,17 @@ async def on_message(message):
             for i in blacklisted_commands:
                 if prefix+i in message_content:
                     blacklisted_commands_used = True
-            if blacklisted_commands_used == False:
+            if blacklisted_commands_used:
+                await message.reply(f"{codeblock}{cb_error}[E] You're not allowed to execute harmful commands!{footer}{codeblock}", delete_after=deletetimer)
+                return
+            command = get_command(message_content)
+            output = []
+            for cmd in Euphoria.commands:
+                output.append(cmd.name)
+            if command in output:
                 await message.reply(message_content)
             else:
-                await message.reply(f"{codeblock}{cb_error}[E] You're not allowed to execute harmful commands!{footer}{codeblock}", delete_after=deletetimer)
-                
+                await message.reply(f"{codeblock}{cb_error}[E] Command not found!{footer}{codeblock}", delete_after=deletetimer)
     elif message.author == Euphoria.user:
         await Euphoria.process_commands(message)
 
@@ -1480,24 +1514,42 @@ async def on_message(message):
 
 #FUN-------------------------------------------------------
 
-@Euphoria.command(name="dame party", aliases=["dame"]) #dame party?
-async def feuhjueigj(ctx):
-    lyrics = """Ptáš se, jak se mám? Já se mám nejlíp.
-Ležím s drinkem u bazénu ve slunečních brejlích.
-Nejmíň milion stupňů na mě teď paří,
-voda už je horká tak, že se skoro vaří."""
-    for i in lyrics.splitlines():
-        await ctx.send(i)
+@Euphoria.command() #dice
+async def dice(ctx):
+    await ctx.send(":"+random.choice(["one", "two", "three", "four", "five", "six"])+":")
 
-@Euphoria.command(name="zijeme len raz", aliases=["zijeme"]) #zijeme len raz
-async def zufhesuifgj(ctx):
-    lyrics = """Žijeme len raz, práve tu a práve teraz
-Slnko svieti rovnako na všetkých z nás
-Tak sa nemrač, ale zabudni na stres
-Zabudni, čo tu bolo včera, dneska je tu ďalší deň
-Voda, slnko, party, klub, relax"""
-    for i in lyrics.splitlines():
-        await ctx.send(i)
+@Euphoria.command(name="8ball") #8ball
+async def ztuhfrjklg(ctx, q="How do I use this command?"):
+    answers = ["Yes", "Totally!", "Nope", "I don't think so", "Maybe", "Ye i like that"]
+    answer = random.choice(answers)
+    if q == "How do I use this command?":
+        answer = f"{prefix}8ball <question>"
+    await ctx.send(f"{codeblock}{cb_prefix}[E] 8Ball replied!\n\n[Question] {q}\n[Answer] {answer}{footer}{codeblock}", delete_after=deletetimer)
+
+
+@Euphoria.command() #gif
+async def gif(ctx):
+    giflist = ['https://tenor.com/view/car-tiny-gif-25285525', 'https://tenor.com/view/goofy-quantavious-quandale-dingle-gif-25174774', 'https://tenor.com/view/mercedes-benz-mercedes-amg-meme-funny-gif-24923771', 'https://tenor.com/view/install-cat-install-cat-gif-21711026', 'https://media.discordapp.net/attachments/741400495091875873/958394277111677018/huh.gif', 'https://media.discordapp.net/attachments/735026304763691071/827752409069387796/image0.gif', 'https://media.discordapp.net/attachments/941393792425152512/944615612406169680/tenor.gif', 'https://cdn.discordapp.com/attachments/981423215471636490/981474225170812958/07d_1.jpg', 'https://cdn.discordapp.com/attachments/981423215471636490/981432214006956032/40EAE2CF-2728-4C2F-BF9B-0617602CB8E3.jpg', 'https://cdn.discordapp.com/attachments/942538452057071670/960627254004678737/IMG_0814.gif', 'https://tenor.com/view/minor-inconvenience-gif-23795670', 'https://media.discordapp.net/attachments/941393792425152512/964595974586662912/caption-12.gif', 'https://tenor.com/view/yroue-youre-your-you-our-gif-23886497', 'https://tenor.com/view/cooper-jinx-bigfootjinx-im-still-amazed-by-it-cat-gif-23555036', 'https://cdn.discordapp.com/attachments/913816677278429304/971823097063833630/7A975301-412C-4FAA-B521-241262AE9A1F.gif', 'https://cdn.discordapp.com/attachments/879864923172261938/973716751806242816/No-Bitches-Meme-Template-on-Megamind.jpg', 'https://cdn.discordapp.com/attachments/660513126990741506/970439696033398884/2020-06-14_20.47.11.png', 'https://tenor.com/view/nigga-gif-18674554', 'https://cdn.discordapp.com/attachments/905513416721047562/970010054227009576/image0-1.gif', 'https://media.discordapp.net/attachments/964577111950106644/976930620716503090/yYsschlw.gif', 'https://media.discordapp.net/attachments/976730805906841613/976734695591145562/GLfmEcyd.gif', 'https://tenor.com/view/cat-cute-burger-burger-cat-cat-burger-gif-25078813', 'https://tenor.com/view/burger-delicious-yummy-mouth-watering-gif-16353143', 'https://tenor.com/view/burger-delicious-yummy-mouth-watering-gif-16353143', 'https://cdn.discordapp.com/attachments/973246398696914995/982001733670694912/unknown.png']
+    await ctx.send(random.choice(giflist))
+
+# @Euphoria.command(name="dame party", aliases=["dame"]) #dame party?
+# async def feuhjueigj(ctx):
+#     lyrics = """Ptáš se, jak se mám? Já se mám nejlíp.
+# Ležím s drinkem u bazénu ve slunečních brejlích.
+# Nejmíň milion stupňů na mě teď paří,
+# voda už je horká tak, že se skoro vaří."""
+#     for i in lyrics.splitlines():
+#         await ctx.send(i)
+
+# @Euphoria.command(name="zijeme len raz", aliases=["zijeme"]) #zijeme len raz
+# async def zufhesuifgj(ctx):
+#     lyrics = """Žijeme len raz, práve tu a práve teraz
+# Slnko svieti rovnako na všetkých z nás
+# Tak sa nemrač, ale zabudni na stres
+# Zabudni, čo tu bolo včera, dneska je tu ďalší deň
+# Voda, slnko, party, klub, relax"""
+#     for i in lyrics.splitlines():
+#         await ctx.send(i)
 
 @Euphoria.command() #bao
 async def bao(ctx):
@@ -2293,12 +2345,23 @@ async def spoil(ctx, *, text=None):
         else:
             await ctx.send(output)
 
-@Euphoria.command()
+@Euphoria.command() #ascii
 async def ascii(ctx, *, text=None):
     if text == None:
         errorsay(f"{ctx.command.name}: text is missing")
-        if consolemode == "false":
-            await ctx.send(f"{codeblock}{cb_error}[E] Usage: {prefix}{ctx.command.name} <text>{footer}{codeblock}", delete_after=deletetimer)
+        await ctx.send(f"""{codeblock}⠀⠀⠀⠀⠀⠀⢠⣤⣴⣶⣿⣿⣿⣿⣿⣶⣤⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡧⠀⠀⠀⡀⠀
+⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⣿⠀
+⠀⢰⣾⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠀⠀⠈⠉⠀⠀⢀⣾⣿⡇
+⢀⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣴⣿⣿⣿⡇
+⢸⣿⣿⣿⣿⣿⣧⣤⣤⣤⣤⣤⣤⣶⣶⣾⣿⣿⣿⣿⣿⣿⠃
+⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁  Usage: {prefix}ascii <text>
+⠸⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠋⠁⠀⠀⠀ 
+⠀⢟⣾⣻⣞⡿⣯⣏⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⡀⠀⠀⠀
+⠀⠈⣳⣻⣼⣻⡽⣯⢷⣦⣄⣀⣀⣀⣀⣠⣤⣶⣿⣿⣦⡀⠀
+⠀⠀⠀⠑⢯⡷⣻⣭⣟⡾⣽⣻⣟⡿⣿⣿⣿⣿⣿⣿⣿⣿⡄
+⠀⠀⠀⠀⠀⠉⢷⡿⣾⣹⢷⣷⣾⣹⢷⡿⣾⢿⣹⣿⠿⠉⠀
+⠀⠀⠀⠀⠀⠀⠀⠉⠁⠋⠻⠶⠏⠷⠯⠟⠝⠛⠁⠁⠀⠀⠀{codeblock}""",delete_after=deletetimer)
     else:
         output = pyfiglet.figlet_format(text)
         output_len = 0
@@ -2314,6 +2377,13 @@ async def ascii(ctx, *, text=None):
 
 
 #MISC-------------------------------------------------------------
+
+@Euphoria.command(aliases=["q", "que", "2b", "2bq", "2bqueue"]) #queue
+async def queue(ctx):
+    r = json.loads(requests.get("https://2bqueue.info/queue").text)
+    prio = r["prio"]
+    regular = r["regular"]
+    await ctx.send(f"{codeblock}{cb_prefix}[E] 2b2t's current queue:\nPriority: {prio}\nRegular: {regular}{footer}{codeblock}", delete_after=deletetimer)
 
 @Euphoria.command(name="bots", aliases=["bot"]) #bots
 async def bots(ctx):
@@ -2359,7 +2429,6 @@ async def feafguzrewhg(ctx, target: discord.User=None):
             await ctx.send(f"https://discord.com/oauth2/authorize?permissions=8&scope=bot+applications.commands&client_id={target.id}")
         else:
             await ctx.send(f"{codeblock}{cb_error}[E] That the user is bot at games doesnt mean he/she's a discord bot dum{empty_char2}ba{empty_char2}ss{footer}{codeblock}",delete_after=deletetimer)
-            
 
 
 @Euphoria.command(aliases=["loadserver", "loadguild", "guildload"]) #serverload
@@ -2689,8 +2758,11 @@ async def AAAtimer123(ctx, count: int=0):
     await ctx.send(f"<t:{gettime()+count}:R>")
 
 @Euphoria.command(aliases=["staffscan"]) #staffcheck
-async def staffcheck(ctx):
+async def staffcheck(ctx, confirm=""):
     await ctx.message.delete()
+    if confirm.lower() != "confirm":
+        await ctx.send(f"{codeblock}{cb_prefix}[E] Are you sure? this action will take a long time! use '{prefix}staffcheck confirm' to continue{footer}{codeblock}", delete_after=deletetimer)
+        return
     bot = discum.Client(token=token, log=False, user_agent=get_random_user_agent())
     # badges = user.public_flags.all()
     # badges = str(badges)
@@ -3005,15 +3077,13 @@ async def silentlink(ctx, url=None, *, text=None):
 
 @Euphoria.command(aliases=["chatbypass"]) #modbypass
 async def modbypass(ctx, *, text=None):
+    await ctx.message.delete()
     if text == None:
         cmd_show()
         toast("Input the text into the console", True)
         text = input(f"{Fore.WHITE}{current_time()} {yellow}> {Fore.WHITE}Input: ")
     output = modbypass_text(text)
-    output_len = 0
-    for letter in output:
-        output_len += 1
-    if output_len > 2000:
+    if len(output) > 2000:
         warnsay(f"{ctx.command.name}: output too long")
     else:
         await ctx.send(output)
@@ -3472,7 +3542,7 @@ async def kick(ctx, user: discord.User=None, *, reason="Unspecified"):
 
 
 @Euphoria.command(aliases=["script"]) #scripts
-async def scripts(ctx, selection=""):
+async def scripts(ctx, selection="", arg=None):
     global loaded_scripts
     if selection.lower() == "reload":
         for script in loaded_scripts:
@@ -3522,7 +3592,7 @@ async def scripts(ctx, selection=""):
 
 {prefix}scripts list ─ shows all loaded & unloaded scripts
 {prefix}scripts reload ─ reloads all of the scripts{footer}{codeblock}""", delete_after=deletetimer)
-
+#{prefix}─
 
 #RAIDING----------------------------------------------------------
 
@@ -3631,7 +3701,7 @@ async def singraid(ctx, song=None):
 @Euphoria.command() #leaveserver
 async def leaveserver(ctx, guild_id=None):
     if guild_id == None:
-        errorsay(f"{ctx.command.name}: server id or text is missing")
+        errorsay(f"{ctx.command.name}: server id is missing")
         if consolemode == "false":
             await ctx.send(f"{codeblock}{cb_error}[E] Usage: {prefix}{ctx.command.name} <server id>{footer}{codeblock}", delete_after=deletetimer)
     else:
@@ -3667,6 +3737,25 @@ async def avatar(ctx, user: discord.User=None):
         user = Euphoria.user
     await ctx.send(user.avatar_url)
 
+@Euphoria.command(aliases=["cycleactivity", "ac"]) #activitycycle
+async def activitycycle(ctx):
+    global cycle_status
+    if cycle_status:
+        cycle_status = False
+        await ctx.send(f"{codeblock}{cb_prefix}[E] Turned off activty cycle{footer}{codeblock}", delete_after=deletetimer)
+        return
+
+    cycle_status = True
+    await ctx.send(f"{codeblock}{cb_prefix}[E] Turned on activty cycle{footer}{codeblock}", delete_after=deletetimer)
+    while cycle_status:
+        await Euphoria.change_presence(status=discord.Status.online)
+        await asyncio.sleep(15)
+        await Euphoria.change_presence(status=discord.Status.idle)
+        await asyncio.sleep(15)
+        await Euphoria.change_presence(status=discord.Status.dnd)
+        await asyncio.sleep(15)
+        
+
 @Euphoria.command(name="status") #status
 async def statuschanger(ctx, *, text=""):
     url = "https://discordapp.com/api/v8/users/@me/settings"
@@ -3681,6 +3770,48 @@ async def statuschanger(ctx, *, text=""):
     requests.request("PATCH", url, headers=headers, data=payload)
     await ctx.send(f"{codeblock}{cb_prefix}[E] Updated your status{footer}{codeblock}", delete_after=deletetimer)
 
+@Euphoria.command(aliases=["cyclestatus"]) #statuscycle
+async def statuscycle(ctx, *, text=None):
+    if text == None:
+        errorsay(f"{ctx.command.name}: text is missing")
+        if consolemode == "false":
+            await ctx.send(f"{codeblock}{cb_error}[E] Usage: {prefix}{ctx.command.name} <text>{footer}{codeblock}", delete_after=deletetimer)
+    else:
+        global cycle_status
+        if text == "stop":
+            cycle_status = False
+            url = "https://discordapp.com/api/v8/users/@me/settings"
+            payload="{\r\n    \"custom_status\": {\r\n        \"text\": \"" + None + "\"\r\n    }\r\n}"
+            headers = {
+            'Authorization': token,
+            'Content-Type': 'application/json',
+            'Cookie': '__cfduid=d7e8d2784592da39fb3f621664b9aede51620414171; __dcfduid=24a543339247480f9b0bb95c710ce1e6'
+            }
+
+            requests.request("PATCH", url, headers=headers, data=payload)
+            await ctx.send(f"{codeblock}{cb_prefix}[E] Statuscycle was disabled{footer}{codeblock}")
+            return
+
+        status_text = []
+        temp = ""
+        for x in text:
+            temp += x
+            status_text.append(temp)
+        
+        cycle_status = True
+        while cycle_status:
+            for x in status_text:
+                url = "https://discordapp.com/api/v8/users/@me/settings"
+
+                payload="{\r\n    \"custom_status\": {\r\n        \"text\": \"" + x + "\"\r\n    }\r\n}"
+                headers = {
+                'Authorization': token,
+                'Content-Type': 'application/json',
+                'Cookie': '__cfduid=d7e8d2784592da39fb3f621664b9aede51620414171; __dcfduid=24a543339247480f9b0bb95c710ce1e6'
+                }
+
+                requests.request("PATCH", url, headers=headers, data=payload)
+                await asyncio.sleep(15)
 
 @Euphoria.command(aliases=["who", "whos"]) #whois
 async def whois(ctx, user: discord.User=None):
@@ -3688,10 +3819,9 @@ async def whois(ctx, user: discord.User=None):
         user = Euphoria.user
     badges = user.public_flags.all()
     badges = str(badges)
+    hypesquad = False
     if "UserFlags.hypesquad" in badges:
         hypesquad = True
-    else:
-        hypesquad = False
     if "<UserFlags.staff: 1>" in badges:
         staff = True
     else:
@@ -4144,6 +4274,11 @@ async def selfbot(ctx):
 try:
     Euphoria.run(token, bot=False)
 except:
+    settings_regenerate()
+    try:
+        token = json.loads(open("settings/config.json", "r").read())["token"]
+    except:
+        token = ""
     if token == "logged out":
         os.system("cls")
         os.system("title Euphoria")
@@ -4173,5 +4308,5 @@ except:
         #     "nitro_sniper": cfg_nitro_sniper
         # }
         config_edit(set_token, set_prefix, "false", "true", "d37ffa", 10, "normal", "true", "true", "true")
-
+        selfbot_reboot()
 # Made by Xellu with <3
