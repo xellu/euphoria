@@ -193,13 +193,11 @@ def startup():
     except:
         pass
     asset_whitelist = ["e.png", "icon.ico", "success.ico"]
-    os.system("cls")
-    os.system("title Euphoria")
+    cls()
+    ctypes.windll.kernel32.SetConsoleTitleW("Euphoria")
     log(f"AUTH: logged in")
     for file in os.listdir("settings/assets"):
-        if file in asset_whitelist:
-            pass
-        else:
+        if file not in asset_whitelist:
             os.remove(f"settings/assets/{file}")
     title()
     if theme.lower() != "moon":
@@ -256,6 +254,10 @@ def get_command(text):
     cmd = cmd.replace(prefix, "")
     return cmd
 
+def nekobot_api(type, args):
+    r = json.loads(requests.get(f"https://nekobot.xyz/api/imagegen?type={type}&{args}").content)
+    return r["message"]
+
 #Logging
 def log(text):
     try:
@@ -309,7 +311,10 @@ def doublehash(text):
 
 def selfbot_reboot():
     scriptname =  os.path.basename(sys.argv[0])
-    os.system(f"""""{scriptname}""""")
+    if linux:
+        os.system(f"./{scriptname}")
+    else:
+        os.system(f"""""{scriptname}""""")
     os._exit(0)
 
 def config_edit(cfg_token=None, cfg_prefix=None, cfg_consolemode=None, cfg_toasts=None, cfg_embed_color=None, cfg_deletetimer=None, cfg_theme=None, cfg_ban_detections=None, cfg_giveaway_sniper=None, cfg_nitro_sniper=None, cfg_raid_detections=None):
@@ -724,7 +729,6 @@ def _tokencheck_():
       working_tokens += _token_ + "\n"
       successsay(f"Valid: {halftoken}")
     else:
-      pass
       errorsay(f"Invalid: {halftoken}")
   open("settings/tokens.txt", "w").write(working_tokens[:-1])
 
@@ -818,6 +822,12 @@ def getuserdata(token):
 	except:
 		pass
 
+def cls():
+    if linux:
+        os.system("clear")
+    else:
+        os.system("cls")
+
 #───────────────────────────────────────────────────────────────#
 # VARIABLES                                                     #
 #───────────────────────────────────────────────────────────────# 
@@ -882,9 +892,6 @@ yellow = "\033[38;5;226m"
 pink = "\033[38;5;200m"
 text_hide = "||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||"
 
-#API
-api_key = "UlhWd2FHOXlhV0V0UzJWNUxtVndNakF5TWkxWVpXeHNkVEV6TXpjdFVGVkNURWxE"
-
 #Other
 raid_log = []
 latest_raid = 0
@@ -934,6 +941,11 @@ c_fun = f"""[ Fun ]
 {prefix}readrules <@user> ─ read the f-ing rules
 {prefix}empty ─ nothing, just nothing 
 {prefix}gif ─ random gif
+{prefix}trash <@user> ─ throw @user outta ur house
+{prefix}tweet <@user> <message> ─ fake tweet
+{prefix}trump <message> ─ fake trump tweet
+{prefix}changemymind <text> ─ change my mind meme
+{prefix}clyde <text> ─ fake clyde message
 {prefix}dice ─ rolls a dice
 {prefix}8ball [question] ─ gives you a random answer
 {prefix}alphabet ─ just read the name idk
@@ -1001,7 +1013,7 @@ c_misc = f"""[ Misc ]
 {prefix}queue ─ shows current 2b2 queue length
 {prefix}serversave ─ saves the server you're in
 {prefix}serverload <list/save id> ─ loads the saved server
-{prefix}statuscycle <stop/text> ─ cycles your status message
+{prefix}statuscycle [text] ─ cycles your status message
 {prefix}activitycycle ─ cycles your activity status"""
 #{prefix}─
 c_abuse = f"""[ Abuse ]
@@ -1104,8 +1116,12 @@ Euphoria.remove_command('help')
 # ON START                                                      #
 #───────────────────────────────────────────────────────────────# 
 
-os.system("cls")
-os.system(f"title Euphoria")
+linux = False
+if "linux" in str(platform.system()).lower():
+    linux = True
+
+cls()
+ctypes.windll.kernel32.SetConsoleTitleW("Euphoria")
 log("INFO: Euphoria SB Launched")
 
 #StartUp screen
@@ -1149,7 +1165,7 @@ async def on_ready(): #ON READY
         cursor.hide()
         startup()
         toast("Logged in", "fix")
-        if "linux" in str(platform.system()).lower():
+        if linux:
             warnsay("Euphoria doesn't have linux support yet, you may experience some issues")
         
         #SCRIPT LOADING
@@ -1466,6 +1482,7 @@ async def on_message(message):
                 errorsay("Can't send a message")
 
     #COMMAND PROCESSING--------------
+    
     if message.author.id == Euphoria.user.id:
         if message.content.startswith(f"{prefix}re") == False or message.content.startswith(f"{prefix}repeat") == False:
             new_command = message.content
@@ -1513,6 +1530,46 @@ async def on_message(message):
 #───────────────────────────────────────────────────────────────# 
 
 #FUN-------------------------------------------------------
+
+@Euphoria.command() #trash
+async def trash(ctx, user: discord.User=None):
+    if user == None:
+        errorsay(f"{ctx.command.name}: text is missing")
+        if consolemode == "false":
+            await ctx.send(f"{codeblock}{cb_error}[E] Usage: {prefix}{ctx.command.name} <@user> <message>{footer}{codeblock}", delete_after=deletetimer)
+    else:
+        ctx.send(nekobot_api("trash", f"url={user.avatar_url}"))
+
+@Euphoria.command() #tweet
+async def tweet(ctx, user: discord.User=None, *, message=None):
+    if message == None or user == None:
+        errorsay(f"{ctx.command.name}: text is missing")
+        if consolemode == "false":
+            await ctx.send(f"{codeblock}{cb_error}[E] Usage: {prefix}{ctx.command.name} <@user> <message>{footer}{codeblock}", delete_after=deletetimer)
+    else:
+        ctx.send(nekobot_api("tweet", f"username={user.display_name}&text={message}"))
+
+@Euphoria.command(aliases=["trumptweet"]) #trump
+async def trump(ctx, *, text=None):
+    if text == None:
+        errorsay(f"{ctx.command.name}: text is missing")
+        if consolemode == "false":
+            await ctx.send(f"{codeblock}{cb_error}[E] Usage: {prefix}{ctx.command.name} <text>{footer}{codeblock}", delete_after=deletetimer)
+    else:
+        ctx.send(nekobot_api("trumptweet", f"text={text}"))
+
+@Euphoria.command(aliases=["cmm"]) #changemymind
+async def changemymind(ctx, *, text=None):
+    if text == None:
+        errorsay(f"{ctx.command.name}: text is missing")
+        if consolemode == "false":
+            await ctx.send(f"{codeblock}{cb_error}[E] Usage: {prefix}{ctx.command.name} <text>{footer}{codeblock}", delete_after=deletetimer)
+    else:
+        ctx.send(nekobot_api("changemymind", f"text={text}"))
+
+@Euphoria.command() #clyde
+async def clyde(ctx, *, text=f"Usage: {prefix}clyde <text>"):
+    await ctx.send(nekobot_api("clyde", f"text={text}"))
 
 @Euphoria.command() #dice
 async def dice(ctx):
@@ -1857,14 +1914,13 @@ async def caption(ctx, text=None):
         except:
             pass
 
-@Euphoria.command() #cowsay
+@Euphoria.command(aliases=["kravarict"]) #cowsay
 async def cowsay(ctx, *, text=f"Usage: {prefix}cowsay <text>"):
     def cowsay_text(msg):
         msg_len = int(len(msg))
         output = ""
         output += " " + "_"*int(msg_len+2)
-        output += "\n"+f"/ {msg} \\"
-        output += "\n"+f"\\ " + " "*int(msg_len) + " /"
+        output += "\n"+f"< {msg} >"
         output += "\n " + "-"*int(msg_len+2)
         output += """
         \   ^__^
@@ -2910,9 +2966,7 @@ async def image(ctx):
             await msg.edit(content=f"{codeblock}{cb_prefix}[E] {random.choice(messages)} {footer}{codeblock}")
 
         r = requests.get(f"{link}")
-        if "/images/notexists.png" in r.text: #invalid url
-            pass
-        else: #valid url
+        if "/images/notexists.png" not in r.text: 
             open("settings/assets/image.txt", "w").write(r.text)
             with open("settings/assets/image.txt", encoding="ansi") as f:
                 urls = f.read()
@@ -3739,21 +3793,21 @@ async def avatar(ctx, user: discord.User=None):
 
 @Euphoria.command(aliases=["cycleactivity", "ac"]) #activitycycle
 async def activitycycle(ctx):
-    global cycle_status
-    if cycle_status:
-        cycle_status = False
+    global cycle_activity
+    if cycle_activity:
+        cycle_activity = False
         await ctx.send(f"{codeblock}{cb_prefix}[E] Turned off activty cycle{footer}{codeblock}", delete_after=deletetimer)
         return
 
-    cycle_status = True
+    cycle_activity = True
     await ctx.send(f"{codeblock}{cb_prefix}[E] Turned on activty cycle{footer}{codeblock}", delete_after=deletetimer)
-    while cycle_status:
+    while cycle_activity:
         await Euphoria.change_presence(status=discord.Status.online)
-        await asyncio.sleep(15)
+        await asyncio.sleep(5)
         await Euphoria.change_presence(status=discord.Status.idle)
-        await asyncio.sleep(15)
+        await asyncio.sleep(5)
         await Euphoria.change_presence(status=discord.Status.dnd)
-        await asyncio.sleep(15)
+        await asyncio.sleep(5)
         
 
 @Euphoria.command(name="status") #status
@@ -3772,16 +3826,12 @@ async def statuschanger(ctx, *, text=""):
 
 @Euphoria.command(aliases=["cyclestatus"]) #statuscycle
 async def statuscycle(ctx, *, text=None):
+    global cycle_status
     if text == None:
-        errorsay(f"{ctx.command.name}: text is missing")
-        if consolemode == "false":
-            await ctx.send(f"{codeblock}{cb_error}[E] Usage: {prefix}{ctx.command.name} <text>{footer}{codeblock}", delete_after=deletetimer)
-    else:
-        global cycle_status
-        if text == "stop":
+        if cycle_status:
             cycle_status = False
             url = "https://discordapp.com/api/v8/users/@me/settings"
-            payload="{\r\n    \"custom_status\": {\r\n        \"text\": \"" + None + "\"\r\n    }\r\n}"
+            payload="{\r\n    \"custom_status\": {\r\n        \"text\": \"" + "" + "\"\r\n    }\r\n}"
             headers = {
             'Authorization': token,
             'Content-Type': 'application/json',
@@ -3789,9 +3839,13 @@ async def statuscycle(ctx, *, text=None):
             }
 
             requests.request("PATCH", url, headers=headers, data=payload)
-            await ctx.send(f"{codeblock}{cb_prefix}[E] Statuscycle was disabled{footer}{codeblock}")
+            await ctx.send(f"{codeblock}{cb_prefix}[E] Statuscycle was disabled{footer}{codeblock}", delete_after=deletetimer)
             return
-
+        else:
+            errorsay(f"{ctx.command.name}: text is missing")
+            if consolemode == "false":
+                await ctx.send(f"{codeblock}{cb_error}[E] Usage: {prefix}{ctx.command.name} <text>{footer}{codeblock}", delete_after=deletetimer)
+    else:  
         status_text = []
         temp = ""
         for x in text:
@@ -3811,7 +3865,7 @@ async def statuscycle(ctx, *, text=None):
                 }
 
                 requests.request("PATCH", url, headers=headers, data=payload)
-                await asyncio.sleep(15)
+                await asyncio.sleep(10)
 
 @Euphoria.command(aliases=["who", "whos"]) #whois
 async def whois(ctx, user: discord.User=None):
@@ -4121,7 +4175,7 @@ Nighty - b real niggty user"""
         config_edit(None, None, None, None, None, None, newtheme.lower())
         if consolemode == "false":
             await ctx.send(f"{codeblock}{cb_prefix}[E] Theme was changed to {newtheme.lower()}{footer}{codeblock}",delete_after=deletetimer)
-        os.system("cls")
+        cls()
         title()
         separator()
         successsay(f"Theme was changed to '{newtheme.lower()}'")
@@ -4193,9 +4247,9 @@ async def restart(ctx):
     infosay("Rebooting...")
     selfbot_reboot()
 
-@Euphoria.command(aliases=["clear", "consoleclear"]) #cls
-async def cls(ctx):
-    os.system("cls")
+@Euphoria.command(name="cls", aliases=["clear", "consoleclear"]) #cls
+async def clearcmd(ctx):
+    cls()
     title()
     separator()
     if consolemode == "false":
@@ -4280,16 +4334,16 @@ except:
     except:
         token = ""
     if token == "logged out":
-        os.system("cls")
-        os.system("title Euphoria")
+        cls()
+        ctypes.windll.kernel32.SetConsoleTitleW("Euphoria")
         title()
         print("[You're logged out]".center(width))
         newtoken = input(f"{Fore.WHITE}{current_time()} {yellow}[Auth] {Fore.WHITE}Token: "+Fore.LIGHTBLACK_EX)
         config_edit(cfg_token=newtoken)
         selfbot_reboot()
     else:
-        os.system(f"title Euphoria")
-        os.system("cls")
+        ctypes.windll.kernel32.SetConsoleTitleW("Euphoria")
+        cls()
         title()
         print("[Authentication]".center(width))
         consolesay("Welcome to euphoria! To use the selfbot, you'll need to authenticate first\n")
