@@ -194,7 +194,8 @@ def startup():
         pass
     asset_whitelist = ["e.png", "icon.ico", "success.ico"]
     cls()
-    ctypes.windll.kernel32.SetConsoleTitleW("Euphoria")
+    if linux == False:
+        os.system("title Euphoria")
     log(f"AUTH: logged in")
     for file in os.listdir("settings/assets"):
         if file not in asset_whitelist:
@@ -301,13 +302,6 @@ def successsay(text):
 
 def hwid():
     return str(subprocess.check_output('wmic csproduct get uuid')).split('\\r\\n')[1].strip('\\r').strip()
-
-def doublehash(text):
-    text_hashed1 = \
-            hashlib.sha256(text.encode()).hexdigest()
-    text_hashed2 = \
-        hashlib.sha256(text_hashed1.encode()).hexdigest()
-    return text_hashed2
 
 def selfbot_reboot():
     scriptname =  os.path.basename(sys.argv[0])
@@ -1121,7 +1115,8 @@ if "linux" in str(platform.system()).lower():
     linux = True
 
 cls()
-ctypes.windll.kernel32.SetConsoleTitleW("Euphoria")
+if linux == False:
+    os.system("title Euphoria")
 log("INFO: Euphoria SB Launched")
 
 #StartUp screen
@@ -4335,14 +4330,16 @@ except:
         token = ""
     if token == "logged out":
         cls()
-        ctypes.windll.kernel32.SetConsoleTitleW("Euphoria")
+        if linux == False:
+            os.system("title Euphoria")
         title()
         print("[You're logged out]".center(width))
         newtoken = input(f"{Fore.WHITE}{current_time()} {yellow}[Auth] {Fore.WHITE}Token: "+Fore.LIGHTBLACK_EX)
         config_edit(cfg_token=newtoken)
         selfbot_reboot()
     else:
-        ctypes.windll.kernel32.SetConsoleTitleW("Euphoria")
+        if linux == False:
+            os.system("title Euphoria")
         cls()
         title()
         print("[Authentication]".center(width))
